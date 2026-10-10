@@ -1,0 +1,21 @@
+.card {
+  flex: 0 0 min(280px, 80%);
+  min-height: 150px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 6px -6px 0 var(--shadow);
+  font-size: 13px;
+  scroll-snap-align: start;
+}
+
+.stars {
+  margin: 0 0 16px;
+  color: var(--star);
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+.text { margin: 0 0 20px; }
+.author { margin: 0; font-size: 12px; }

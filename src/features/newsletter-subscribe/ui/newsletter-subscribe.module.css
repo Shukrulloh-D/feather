@@ -1,0 +1,15 @@
+.form { margin-top: 12px; }
+
+.input {
+  width: 100%;
+  max-width: 220px;
+  padding: 8px 0;
+  font: inherit;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+}
+
+.message { margin: 8px 0 0; font-size: 12px; }

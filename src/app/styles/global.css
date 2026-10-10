@@ -1,0 +1,21 @@
+:root {
+  --bg: #fcf8f4;
+  --orange: #ee6c2e;
+  --pink: #f6cfca;
+  --footer: #f3f0ea;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: #000;
+  background: var(--bg);
+}
+
+img { max-width: 100%; }
+
+.error { padding: 16px; text-align: center; color: #b00020; }

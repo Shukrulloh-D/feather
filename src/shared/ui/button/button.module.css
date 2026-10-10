@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.primary,
+.light {
+  padding: 12px 32px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #000;
+}
+
+.primary { background: var(--orange); }
+.light { background: #fff; }
+
+.link {
+  padding: 0;
+  background: none;
+  color: var(--orange);
+  font-size: 14px;
+}
+
+.primary:hover,
+.light:hover { opacity: 0.85; }
+.link:hover { text-decoration: underline; }
