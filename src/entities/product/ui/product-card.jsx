@@ -8,7 +8,7 @@ export function ProductCard({ product }) {
       <h3 className={styles.name}>{product.name}</h3>
       <p className={styles.line}>
         rent for <span className={styles.rent}>${product.rent}</span>/mo
-      </p>
+      </p>  
       <p className={styles.line}>
         or buy for <span className={styles.old}>${product.buyOld}</span>
       </p>

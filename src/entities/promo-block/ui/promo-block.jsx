@@ -1,7 +1,7 @@
 import { Button } from '@/shared/ui/button'
 import styles from './promo-block.module.css'
 
-// Универсальный блок «текст + картинки». layout: "text-image" | "image-text"
+//Универсальный блок «текст + картинки». layout: "text-image" | "image-text"
 export function PromoBlock({ block }) {
   // Класс reverse меняет порядок колонок через CSS (order)
   const isReversed = block.layout === 'image-text'
