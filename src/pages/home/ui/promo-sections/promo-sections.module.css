@@ -1,1 +1,2 @@
-.wrapper { background: #fff; padding-bottom: 40px; }
+/* Белая полоса на всю ширину, блоки внутри сами управляют отступами */
+.wrapper { padding: 16px 0 48px; background: #fff; }

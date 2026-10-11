@@ -9,6 +9,9 @@
 *::before,
 *::after { box-sizing: border-box; }
 
+/* Плавная прокрутка по якорным ссылкам (#furniture, #business ...) */
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -16,6 +19,22 @@ body {
   background: var(--bg);
 }
 
-img { max-width: 100%; }
+img { display: block; max-width: 100%; }
 
-.error { padding: 16px; text-align: center; color: #b00020; }
+/* Общий контейнер: ограничивает ширину контента и центрирует его */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+}
+
+/* Если у пользователя отключены анимации в системе — не анимируем */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

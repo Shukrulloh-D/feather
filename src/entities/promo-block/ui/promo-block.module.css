@@ -1,18 +1,19 @@
+/* Блок на всю ширину: текст в одной колонке, картинка прижата к краю окна (как в макете) */
 .block {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 48px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 24px;
+  padding: 32px 0;
 }
 
+.content { padding-left: 64px; }
+.reverse .content { padding-left: 0; padding-right: 64px; }
 .reverse .media { order: -1; }
 
 .title {
   margin: 0 0 16px;
-  font-size: clamp(26px, 4vw, 32px);
+  font-size: clamp(26px, 3.5vw, 36px);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -21,7 +22,12 @@
 
 .media { display: flex; gap: 4px; }
 .figure { position: relative; flex: 1; margin: 0; }
-.image { display: block; width: 100%; height: 100%; max-height: 420px; object-fit: cover; }
+
+/* Картинка показывается целиком, без обрезки: высота считается по пропорциям файла */
+.image { width: 100%; height: auto; }
+
+/* Две картинки рядом — одинаковые пропорции, лишнее обрезается */
+.pair .image { aspect-ratio: 4 / 5; object-fit: cover; }
 
 /* Метка Residential / Office поверх картинки */
 .label {
@@ -33,10 +39,11 @@
   font-size: 14px;
 }
 
-/* Салатовая рамка для Garage Sale */
-.lime { padding: 10px; background: #d0d84b; max-width: 280px; margin: 0 auto; }
+/* Салатовая рамка у Garage Sale */
+.lime { padding: 10px; background: #d0d84b; max-width: 320px; margin: 0 auto; }
 
 @media (max-width: 768px) {
   .block { grid-template-columns: 1fr; gap: 24px; }
+  .content, .reverse .content { padding: 0 20px; }
   .reverse .media { order: 0; }
 }

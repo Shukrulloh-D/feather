@@ -1,11 +1,15 @@
 import { Button } from '@/shared/ui/button'
 import styles from './promo-block.module.css'
 
-//Универсальный блок «текст + картинки». layout: "text-image" | "image-text"
+// Универсальный блок «текст + картинки». layout: "text-image" | "image-text"
 export function PromoBlock({ block }) {
-  // Класс reverse меняет порядок колонок через CSS (order)
+  // reverse меняет колонки местами через CSS (order)
   const isReversed = block.layout === 'image-text'
-  const frameClass = block.frame === 'lime' ? styles.lime : ''
+  // Если картинок две (Residential / Office) — показываем их рядом одинаковой высоты
+  const isPair = block.images.length > 1
+  const isLime = block.frame === 'lime'
+
+  const mediaClass = `${styles.media} ${isPair ? styles.pair : ''} ${isLime ? styles.lime : ''}`
 
   return (
     <section className={`${styles.block} ${isReversed ? styles.reverse : ''}`}>
@@ -17,7 +21,7 @@ export function PromoBlock({ block }) {
         <Button variant="link" href={block.linkHref}>{block.linkLabel}</Button>
       </div>
 
-      <div className={`${styles.media} ${frameClass}`}>
+      <div className={mediaClass}>
         {block.images.map((img) => (
           <figure key={img.src} className={styles.figure}>
             <img className={styles.image} src={img.src} alt={img.alt} loading="lazy" />

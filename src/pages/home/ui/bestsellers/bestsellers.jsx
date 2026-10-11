@@ -6,8 +6,8 @@ import { ErrorMessage } from '@/shared/ui/error-message'
 import { ProductCard } from '@/entities/product'
 import styles from './bestsellers.module.css'
 
-export function Bestsellers() {
-  // Заголовок секции + список товаров из ресурса /products
+export function Bestsellers({ onAddToCart }) {
+  // Два запроса: заголовок секции (/bestsellers) и товары (/products)
   const { data: section, isLoading: isSectionLoading, error: sectionError } = useFetch('/bestsellers')
   const { data: products, isLoading: isProductsLoading, error: productsError } = useFetch('/products')
 
@@ -19,7 +19,7 @@ export function Bestsellers() {
       <SectionTitle>{section.title}</SectionTitle>
       <div className={styles.grid}>
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
         ))}
       </div>
       <div className={styles.more}>

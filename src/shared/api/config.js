@@ -1,2 +1,2 @@
-// Адрес json-server (запускается вместе с проектом командой npm run dev)
-export const API_URL = 'http://localhost:3001'
+// Данные лежат в public/api/*.json — Vite отдаёт их как обычные файлы по адресу /api/...
+export const API_URL = '/api'

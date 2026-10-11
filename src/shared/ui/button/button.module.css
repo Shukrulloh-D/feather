@@ -4,6 +4,7 @@
   cursor: pointer;
   text-decoration: none;
   border: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .primary,
@@ -25,5 +26,7 @@
 }
 
 .primary:hover,
-.light:hover { opacity: 0.85; }
+.light:hover { transform: translateY(-2px); opacity: 0.9; }
+.primary:active,
+.light:active { transform: translateY(0); }
 .link:hover { text-decoration: underline; }

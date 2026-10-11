@@ -3,6 +3,12 @@
   background: #fff;
   text-align: center;
   font-size: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .image {
@@ -12,12 +18,8 @@
   margin-bottom: 16px;
 }
 
-.name {
-  margin: 0 0 8px;
-  font-size: 14px;
-  font-weight: 400;
-}
-
+.name { margin: 0 0 8px; font-size: 14px; font-weight: 400; }
 .line { margin: 4px 0; }
 .rent { color: var(--orange); font-size: 16px; }
 .old { color: #777; }
+.action { margin-top: 12px; }

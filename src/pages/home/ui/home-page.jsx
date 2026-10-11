@@ -1,3 +1,4 @@
+import { Reveal } from '@/shared/ui/reveal'
 import { Hero } from './hero/hero'
 import { ShopByRoom } from './shop-by-room/shop-by-room'
 import { Mission } from './mission/mission'
@@ -9,19 +10,20 @@ import { EaseBanner } from './ease-banner/ease-banner'
 import { FinalCta } from './final-cta/final-cta'
 
 // Страница собирается из секций в порядке макета.
-// Секции живут внутри страницы, потому что больше нигде не повторяются
-export function HomePage() {
+// Секции лежат внутри страницы, потому что больше нигде не повторяются.
+// Reveal плавно показывает секцию при прокрутке; Hero виден сразу, поэтому без него
+export function HomePage({ onAddToCart }) {
   return (
     <>
       <Hero />
-      <ShopByRoom />
-      <Mission />
-      <PromoSections />
-      <Bestsellers />
-      <FloydBanner />
-      <Reviews />
-      <EaseBanner />
-      <FinalCta />
+      <Reveal><ShopByRoom /></Reveal>
+      <Reveal><Mission /></Reveal>
+      <Reveal><PromoSections /></Reveal>
+      <Reveal><Bestsellers onAddToCart={onAddToCart} /></Reveal>
+      <Reveal><FloydBanner /></Reveal>
+      <Reveal><Reviews /></Reveal>
+      <Reveal><EaseBanner /></Reveal>
+      <Reveal><FinalCta /></Reveal>
     </>
   )
 }
