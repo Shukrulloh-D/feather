@@ -48,7 +48,7 @@ shared     → то, что не знает про сайт: кнопка, за�
 - Плавная прокрутка по якорям: `scroll-behavior: smooth` в `global.css`.
 
 ## Частые вопросы
-- Иконка вкладки: файл `public/favicon.svg`, подключён в `index.html` тегом `<link rel="icon">`.
+- Иконка вкладки: файл `public/favicon.svg`,подключён в `index.html` тегом `<link rel="icon">`.
 - Переименовать `global.css`: переименуй файл и поправь одну строку импорта в `src/main.jsx`.
 - Новая картинка: положи файл в `public/images/` и впиши путь в нужный json.
 - Новая секция: папка в `src/pages/home/ui/<имя>/`, файлы `<имя>.jsx` и `<имя>.module.css`, подключи в `home-page.jsx`.
