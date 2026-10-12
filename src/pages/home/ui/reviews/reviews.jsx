@@ -16,7 +16,6 @@ export function Reviews() {
   return (
     <section className={styles.section}>
       <SectionTitle>{section.title}</SectionTitle>
-      {/* Горизонтальный скролл со scroll-snap, без слайдер-библиотек */}
       <div className={styles.track}>
         {reviews.map((review) => (
           <ReviewCard key={review.id} review={review} />

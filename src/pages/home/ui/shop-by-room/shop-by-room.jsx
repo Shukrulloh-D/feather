@@ -10,7 +10,6 @@ export function ShopByRoom() {
   const { data: section, isLoading: isSectionLoading, error: sectionError } = useFetch('/shopByRoom')
   const { data: rooms, isLoading: isRoomsLoading, error: roomsError } = useFetch('/rooms')
 
-  // Секция готова, когда завершились оба запроса
   if (isSectionLoading || isRoomsLoading) return <Loader />
   if (sectionError || roomsError) return <ErrorMessage message={sectionError || roomsError} />
 

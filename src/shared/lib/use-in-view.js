@@ -11,7 +11,7 @@ export function useInView() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)
-          observer.disconnect() // анимация нужна один раз — дальше не следим
+          observer.disconnect()
         }
       },
       { threshold: 0.1 },

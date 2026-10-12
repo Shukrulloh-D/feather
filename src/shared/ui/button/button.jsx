@@ -1,6 +1,5 @@
 import styles from './button.module.css'
 
-// variant: primary (оранжевая таблетка), light (белая таблетка), link (оранжевый текст)
 // Если передан href — рендерим <a>, иначе <button>
 export function Button({ variant = 'primary', href, children, ...props }) {
   const className = `${styles.button} ${styles[variant]}`

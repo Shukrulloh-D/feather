@@ -14,7 +14,6 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
-        {/* Колонки ссылок строятся из массива columns */}
         {footer.columns.map((column) => (
           <nav key={column.id} className={styles.column}>
             <h3 className={styles.heading}>{column.title}</h3>

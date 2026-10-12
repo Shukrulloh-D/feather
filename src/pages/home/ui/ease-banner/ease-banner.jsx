@@ -13,7 +13,6 @@ export function EaseBanner() {
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>{ease.title}</h2>
-      {/* Логотипы прессы выводим текстом, чтобы не зависеть от картинок */}
       <ul className={styles.press}>
         {ease.press.map((item) => (
           <li key={item.id}>{item.name}</li>

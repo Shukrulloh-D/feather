@@ -11,7 +11,6 @@ export function Mission() {
   if (error) return <ErrorMessage message={error} />
 
   return (
-    // section на всю ширину (белый фон), текст внутри ограничен по ширине
     <section className={styles.section} id="why-feather">
       <div className={styles.inner}>
         <h2 className={styles.quote}>{mission.quote}</h2>

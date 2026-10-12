@@ -11,7 +11,6 @@
 .title { margin: 0 0 24px; font-size: clamp(36px, 5vw, 56px); font-weight: 400; line-height: 1.1; }
 .text { margin: 0 0 32px; font-size: 15px; line-height: 1.5; }
 
-/* Картинка показывается целиком, высота считается по пропорциям файла */
 .image { width: 100%; height: auto; }
 
 @media (max-width: 768px) {

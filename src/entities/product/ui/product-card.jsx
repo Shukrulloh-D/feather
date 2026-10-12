@@ -1,15 +1,13 @@
 import { Button } from '@/shared/ui/button'
 import styles from './product-card.module.css'
 
-// Карточка товара: аренда в месяц + цена покупки (старая цена серая).
-// onAddToCart приходит сверху (из App) — карточка сама ничего не хранит
 export function ProductCard({ product, onAddToCart }) {
   return (
     <article className={styles.card}>
       <img className={styles.image} src={product.image} alt={product.name} loading="lazy" />
       <h3 className={styles.name}>{product.name}</h3>
       <p className={styles.line}>
-        rent for <span className={styles.rent}>${product.rent}</span>/mo
+        Rent for <span className={styles.rent} >${product.rent}</span>/mo
       </p>
       <p className={styles.line}>
         or buy for <span className={styles.old}>${product.buyOld}</span>

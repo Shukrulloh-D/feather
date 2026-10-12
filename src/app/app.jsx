@@ -6,7 +6,6 @@ export function App() {
   return (
     <>
       <Header />
-      {/* Семантический main для основного контента */}
       <main>
         <HomePage />
       </main>

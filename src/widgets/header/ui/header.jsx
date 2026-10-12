@@ -10,7 +10,6 @@ export function Header({ cartCount }) {
   const [isOpen, setIsOpen] = useState(false) // открыто ли мобильное меню
   const [isScrolled, setIsScrolled] = useState(false) // прокручена ли страница
 
-  // Слушаем скролл: когда страница ушла вниз, добавляем тень шапке
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10)
     window.addEventListener('scroll', handleScroll)
@@ -32,7 +31,6 @@ export function Header({ cartCount }) {
           ☰
         </button>
 
-        {/* Слева основное меню, справа сервисное. Клик по ссылке закрывает мобильное меню */}
         <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`} onClick={() => setIsOpen(false)}>
           {header.navLeft.map((item) => (
             <a key={item.id} href={item.href}>{item.label}</a>

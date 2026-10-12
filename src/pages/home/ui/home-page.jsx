@@ -9,9 +9,6 @@ import { Reviews } from './reviews/reviews'
 import { EaseBanner } from './ease-banner/ease-banner'
 import { FinalCta } from './final-cta/final-cta'
 
-// Страница собирается из секций в порядке макета.
-// Секции лежат внутри страницы, потому что больше нигде не повторяются.
-// Reveal плавно показывает секцию при прокрутке; Hero виден сразу, поэтому без него
 export function HomePage({ onAddToCart }) {
   return (
     <>

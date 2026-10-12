@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import styles from './newsletter-subscribe.module.css'
 
-// Форма подписки. Бэкенда нет, поэтому отправку имитируем таймером
+// Форма подписки
 export function NewsletterSubscribe() {
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState('idle') // idle | loading | success
+  const [status, setStatus] = useState('idle')
 
   const handleSubmit = (event) => {
-    event.preventDefault() // не даём странице перезагрузиться
+    event.preventDefault()
     setStatus('loading')
 
     // Имитация ответа сервера через 0.8 секунды

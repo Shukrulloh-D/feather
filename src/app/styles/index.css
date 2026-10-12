@@ -9,7 +9,7 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-/* Плавная прокрутка по якорным ссылкам (#furniture, #business ...) */
+/* плавная прокрутка */
 html { scroll-behavior: smooth; }
 
 body {
@@ -21,7 +21,7 @@ body {
 
 img { display: block; max-width: 100%; }
 
-/* Общий контейнер: ограничивает ширину контента и центрирует его */
+/* общий контейнер чтобы центрировал проект */
 .container {
   width: 100%;
   max-width: 1280px;
@@ -33,7 +33,6 @@ img { display: block; max-width: 100%; }
   .container { padding: 0 20px; }
 }
 
-/* Если у пользователя отключены анимации в системе — не анимируем */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }

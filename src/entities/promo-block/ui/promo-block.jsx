@@ -1,11 +1,8 @@
 import { Button } from '@/shared/ui/button'
 import styles from './promo-block.module.css'
 
-// Универсальный блок «текст + картинки». layout: "text-image" | "image-text"
 export function PromoBlock({ block }) {
-  // reverse меняет колонки местами через CSS (order)
   const isReversed = block.layout === 'image-text'
-  // Если картинок две (Residential / Office) — показываем их рядом одинаковой высоты
   const isPair = block.images.length > 1
   const isLime = block.frame === 'lime'
 

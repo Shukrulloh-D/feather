@@ -4,7 +4,7 @@ import { ErrorMessage } from '@/shared/ui/error-message'
 import { PromoBlock } from '@/entities/promo-block'
 import styles from './promo-sections.module.css'
 
-// Четыре блока «текст + картинка» из макета (Enjoy, Garage Sale, Business, Never assemble)
+// Enjoy, Garage Sale, Business, Never assemble
 export function PromoSections() {
   // Запрос к json-server: GET /promoBlocks (массив блоков)
   const { data: blocks, isLoading, error } = useFetch('/promoBlocks')
