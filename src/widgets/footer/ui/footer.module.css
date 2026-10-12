@@ -9,7 +9,12 @@
 .heading { margin: 0 0 24px; font-size: 12px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; }
 .newsletter { margin-top: 40px; }
 
-.list { margin: 0; padding: 0; list-style: none; font-size: 12px; }
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+}
 .list li { margin-bottom: 14px; }
 .list a { color: #000; text-decoration: none; }
 .list a:hover { color: var(--orange); }
